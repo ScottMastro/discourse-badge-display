@@ -1,0 +1,5 @@
+{{#if siteSettings.badge_display_enabled}}
+  <hr>
+  <label class="control-label">{{i18n "display_badge.display_preference_title"}}</label>
+  {{preference-checkbox labelKey="display_badge.display_preference_label" checked=model.custom_fields.display_badges}}
+{{/if}}

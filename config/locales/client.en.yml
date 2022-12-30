@@ -1,0 +1,9 @@
+en:
+  site_settings:
+    badge_display_enabled: "enable badge display"
+    display_badges_by_default: "default user preference for displaying badges"
+    displayed_badge_ids: "id of badges to display for each user"
+  js:
+    display_badge:
+      display_preference_title: "Show badges"
+      display_preference_label: "See user badges alongside posts"

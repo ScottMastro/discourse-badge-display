@@ -1,0 +1,13 @@
+plugins:
+  badge_display_enabled:
+    default: true
+    client: true
+
+  display_badges_by_default:
+    default: false
+    client: true
+
+  displayed_badge_ids:
+    default: ""
+    type: list
+    client: true
