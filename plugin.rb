@@ -22,11 +22,7 @@ after_initialize do
     ids = SiteSetting.displayed_badge_ids.split('|').map(&:to_i)
     badges.select { |b| ids.include?(b.id) }
   end
-  
 
 end
 
-
-
 register_asset "stylesheets/common/common.scss"
-register_asset "stylesheets/mobile/mobile.scss", :mobile
