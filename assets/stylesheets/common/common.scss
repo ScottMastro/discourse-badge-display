@@ -1,12 +1,10 @@
-.user-badge-display{
-  position: absolute;
-  top: 3em;
-  display: flex;
-  column-gap: 0.2em;
-}
-
 .badge-display-icon{
   width: 15px;
   height: 15px;
   z-index:1 ;
+}
+
+.user-badge-display{
+  display: flex;
+  column-gap: 0.2em;
 }
