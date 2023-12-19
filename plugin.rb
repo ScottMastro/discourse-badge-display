@@ -2,8 +2,8 @@
 
 # name: discourse-badge-display
 # about: Show badges next to Discourse posts
-# version: 0.1
-# author: Scott Mastro
+# version: 1.0.0
+# authors: ScottMastro
 # url: https://github.com/ScottMastro/discourse-badge-display
 # transpile_js: true
 
