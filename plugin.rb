@@ -2,7 +2,7 @@
 
 # name: discourse-badge-display
 # about: Show badges next to Discourse posts
-# version: 1.0.0
+# version: 1.3
 # authors: ScottMastro
 # url: https://github.com/ScottMastro/discourse-badge-display
 # transpile_js: true
@@ -10,19 +10,21 @@
 enabled_site_setting :badge_display_enabled
 
 after_initialize do
-  User.register_custom_field_type('display_badges', :boolean)
+  User.register_custom_field_type("display_badges", :boolean)
   register_editable_user_custom_field :display_badges
-  DiscoursePluginRegistry.serialized_current_user_fields << 'display_badges'
+  DiscoursePluginRegistry.serialized_current_user_fields << "display_badges"
 
   add_to_serializer(:post, :display_badges) do
-    ActiveModel::ArraySerializer.new(object&.user&.display_badges, each_serializer: BadgeSerializer).as_json
-  end
-  
-  add_to_class(:user, :display_badges) do
-    ids = SiteSetting.displayed_badge_ids.split('|').map(&:to_i)
-    badges.select { |b| ids.include?(b.id) }
+    ActiveModel::ArraySerializer.new(
+      object&.user&.display_badges,
+      each_serializer: BadgeSerializer,
+    ).as_json
   end
 
+  add_to_class(:user, :display_badges) do
+    ids = SiteSetting.displayed_badge_ids.split("|").map(&:to_i)
+    badges.select { |b| ids.include?(b.id) }
+  end
 end
 
 register_asset "stylesheets/common/common.scss"

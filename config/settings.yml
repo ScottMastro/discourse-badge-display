@@ -1,4 +1,4 @@
-plugins:
+badge_display:
   badge_display_enabled:
     default: true
     client: true

@@ -1,10 +1,6 @@
 {
-  "name": "discourse-badge-display",
-  "version": "0.1",
-  "repository": "https://github.com/ScottMastro/discourse-badge-display",
-  "author": "ScottMastro",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint-config-discourse": "^3.0.0"
+  "private": true,
+  "dependencies": {
+    "discourse": "npm:@discourse/types@*"
   }
 }

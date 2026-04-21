@@ -1,4 +1,9 @@
 en:
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          badge_display: "Badge Display"
   site_settings:
     badge_display_enabled: "enable badge display"
     display_badges_by_default: "default user preference for displaying badges"
